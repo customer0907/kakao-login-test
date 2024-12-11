@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kakao Login Test</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        // URL의 파라미터에서 인증 코드 추출
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        
+        if (code) {
+            document.getElementById('result').innerHTML = 
+                '인증 완료! 코드: ' + code;
+        }
+    </script>
+</body>
+</html>
